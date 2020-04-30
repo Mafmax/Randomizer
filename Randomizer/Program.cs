@@ -8,9 +8,12 @@ namespace Randomizer
 {
     class Program
     {
+
+        private static int iterations = 0;
+
         static void Main(string[] args)
         {
-            const int iterations = 10000000;
+            
             Item tempItem;
             StringBuilder tempString = new StringBuilder();
             int counter=0;
@@ -45,7 +48,20 @@ namespace Randomizer
                 
                 FieldInfo field = typeof(Item).GetField("probability", BindingFlags.NonPublic | BindingFlags.Instance);
 
-              
+               
+                while (true)
+                {
+                    Console.Clear();
+                    Console.WriteLine("Введите целое количество итераций.");
+                    
+                    if (Int32.TryParse(Console.ReadLine(), out iterations))
+                    {
+                        if (iterations > 0)
+                        {
+                            break;
+                        }
+                    }
+                }
                 while (counter < iterations)
                 {
                     randomItem = Randomizer.GetRandom<Item>(drop, field);
