@@ -1,0 +1,11 @@
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\bin\Debug\netcoreapp3.0\Randomizer.exe
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\bin\Debug\netcoreapp3.0\Randomizer.deps.json
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\bin\Debug\netcoreapp3.0\Randomizer.runtimeconfig.json
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\bin\Debug\netcoreapp3.0\Randomizer.runtimeconfig.dev.json
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\bin\Debug\netcoreapp3.0\Randomizer.dll
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\bin\Debug\netcoreapp3.0\Randomizer.pdb
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\obj\Debug\netcoreapp3.0\Randomizer.csprojAssemblyReference.cache
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\obj\Debug\netcoreapp3.0\Randomizer.AssemblyInfoInputs.cache
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\obj\Debug\netcoreapp3.0\Randomizer.AssemblyInfo.cs
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\obj\Debug\netcoreapp3.0\Randomizer.dll
+C:\workspace\VisualStudioProjects\C# Projects\Randomizer\Randomizer\obj\Debug\netcoreapp3.0\Randomizer.pdb
