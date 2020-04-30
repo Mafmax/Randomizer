@@ -10,7 +10,7 @@ namespace Randomizer
     {
 
 
-        public static T GetRandom<T>(List<T> drop, FieldInfo chanceField)
+        public static T GetRandom<T>(List<T> drop, FieldInfo chanceField, FieldInfo idField)
         {
             int tempItemId, resultItemId=0;
 
@@ -22,11 +22,14 @@ namespace Randomizer
             {
                 throw new MissingFieldException("У коллекции предметов не найдено поле с вероятностью. ");
             }
-
+            if (idField == null)
+            {
+                throw new MissingFieldException("У коллекции предметов не найдено поле с идентификатором. ");
+            }
             foreach (var item in drop)
             {
 
-                items[(int)typeof(T).GetField("id",BindingFlags.NonPublic | BindingFlags.Instance).GetValue(item)]= (float)chanceField.GetValue(item);
+                items[(int)idField.GetValue(item)]= (float)chanceField.GetValue(item);
 
             }
 
@@ -44,7 +47,7 @@ namespace Randomizer
                 items[int.MaxValue] = 100 - sum;
                 foreach(var item in drop)
                 {
-                    if((int)typeof(T).GetField("id", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(item) == int.MaxValue)
+                    if((int)idField.GetValue(item) == int.MaxValue)
                     {
                         chanceField.SetValue(item,100 - sum);
                     }
@@ -73,7 +76,7 @@ namespace Randomizer
             
             foreach(var item in drop)
             {
-                tempItemId = (int)typeof(T).GetField("id", BindingFlags.NonPublic | BindingFlags.Instance).GetValue(item);
+                tempItemId = (int)idField.GetValue(item);
                 //Console.WriteLine(tempItemId + "<---->" + resultItemId);
                 if (tempItemId == resultItemId)
                 {

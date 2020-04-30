@@ -46,7 +46,8 @@ namespace Randomizer
             try
             {
                 
-                FieldInfo field = typeof(Item).GetField("probability", BindingFlags.NonPublic | BindingFlags.Instance);
+                FieldInfo chanceField = typeof(Item).GetField("probability", BindingFlags.NonPublic | BindingFlags.Instance);
+                FieldInfo idField = typeof(Item).GetField("id", BindingFlags.NonPublic | BindingFlags.Instance);
 
                
                 while (true)
@@ -64,7 +65,7 @@ namespace Randomizer
                 }
                 while (counter < iterations)
                 {
-                    randomItem = Randomizer.GetRandom<Item>(drop, field);
+                    randomItem = Randomizer.GetRandom<Item>(drop, chanceField,idField);
 
 
                     massCounter[randomItem.Name]++;
